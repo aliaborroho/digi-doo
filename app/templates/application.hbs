@@ -1,3 +1,37 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {{#link-to 'digidoo.index' class='navbar-brand'}}
+                Byrth
+            {{/link-to}}
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    {{#link-to 'digidoo.index'}}Home{{/link-to}}
+                </li>
+                <li>
+                    <a href="/SMSMvc">Message Manager</a>
+                </li>
+                <li>
+                    <a href="/ContractionsMvc">Contraction Timer</a>
+                </li>
+                <li>
+                    {{#link-to 'digidoo.hospitals.create'}}Hospital Info{{/link-to}}
+                </li>
+                <li>
+                    <a href="/ContactsMvc">Contacts Manager</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-{{outlet}}
+<div class="container body-content">
+    {{outlet}}
+</div>
