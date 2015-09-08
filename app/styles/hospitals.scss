@@ -1,15 +1,26 @@
+/* Liberally stolen from Paul Irish */
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+//html {
+  //box-sizing: border-box;
+//}
+//*, *:before, *:after {
+  //box-sizing: inherit;
+//}
 body {
    padding-top: 50px;
+   background-attachment: fixed;
    padding-bottom: 20px;
-   background-color: peachpuff;
+   // background-color: red;
    background-image: url(/images/expectant-mother_360.jpg);
    background-size: cover;
    opacity: 0.8;
    font-family: Georgia;
    font-weight:300;
 }
-
+.timer {
+    color: red;
+}
 .countdown {
  padding: 30px;
  margin-bottom: 30px;
@@ -52,18 +63,19 @@ body {
    opacity: .6;
 }
 
+
 footer{
    text-align: right;
    color: antiquewhite;
 }
 
-.table{
+.table {
 
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
-   padding-left: 15px;
-   padding-right: 15px;
+   padding-left: 20px;
+   padding-right: 20px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -77,6 +89,4 @@ body {
 }
 
 
-.hospital-form {
-    background-color: red;
-}
+

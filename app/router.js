@@ -6,8 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('digidoo', {path: '/'}, function() {
+  this.route('digidoo', function() {
+    this.route('index', {path: '/'});
     this.route('hospitals', function() {
+      this.route('create');
+    });
+    this.route('sms', function() {
       this.route('create');
     });
   });
