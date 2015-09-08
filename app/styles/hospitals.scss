@@ -15,12 +15,17 @@ body {
    background-image: url(/images/expectant-mother_360.jpg);
    background-size: cover;
    opacity: 0.8;
-   font-family: Georgia;
+   font-family: 'Cinzel Decorative', cursive;
    font-weight:300;
 }
-.timer {
-    color: red;
+
+
+
+.hospital-list {
+  font-size: 55px;
+  color: antiquewhite;
 }
+
 .countdown {
  padding: 30px;
  margin-bottom: 30px;
@@ -69,9 +74,9 @@ footer{
    color: antiquewhite;
 }
 
-.table {
 
-}
+
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
    padding-left: 20px;
