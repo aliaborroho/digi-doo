@@ -8,6 +8,7 @@ module.exports = function(environment) {
     locationType: 'auto',
     googleFonts: [
       'Cinzel+Decorative:300',
+      'Linotype Didot:300',
       'Roboto:300'
     ],
     EmberENV: {

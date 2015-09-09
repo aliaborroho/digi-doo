@@ -20,7 +20,7 @@ export default Ember.Route.extend({
           .then(() => {
             this.controller.set('newPostContent', '');
           });
-        }, () => {debugger;});
+        }, () => {});
     }
   }
 });
