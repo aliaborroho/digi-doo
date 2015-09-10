@@ -22,7 +22,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src':"'self' fonts.gstatic.com",
-      'connect-src': "'self' http://labortracker.azurewebsites.net",
+      'connect-src': "'self' http://labortracker2.azurewebsites.net http://labortracker.azurewebsites.net",
       'img-src': "'self'",
       'style-src':  "'self' fonts.googleapis.com",
       'media-src': "'self'",

@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    this.store.findAll('hospitals');
+    return this.store.findAll('hospital');
   }
 });
  //
