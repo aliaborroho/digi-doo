@@ -4,7 +4,7 @@ export default DS.RESTAdapter.extend({
   host: 'http://labortracker.azurewebsites.net',
   namespace: 'api',
   // actions: {
-  //   showBackground: function() {
+  //   createRecord: function() {
   //     this.controller.set('background', true);
   //   }.on('activate'),
 

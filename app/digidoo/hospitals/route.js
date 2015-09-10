@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // z
+  model: function() {
+    this.store.findAll('hospitals');
+  }
 });
+ //
+
+

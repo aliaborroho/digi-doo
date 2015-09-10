@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  renderTemplate: function() {
 
-  //model this.store.findAll('hospital')
+  }
 });
