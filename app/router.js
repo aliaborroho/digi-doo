@@ -10,6 +10,9 @@ Router.map(function() {
     this.route('hospitals', function() {
       this.route('create');
     });
+    this.route('contacts', function() {
+      this.route('create');
+    });
     this.route('sms', function() {
       this.route('create');
     });
