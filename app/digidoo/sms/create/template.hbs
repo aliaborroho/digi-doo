@@ -1,57 +1,39 @@
-<h1>SMS SOME BITCHES</h1>
-
- <h2>Create</h2>
-<form action="/hospitalsmvc/create" method="post">
+<h2>Message Manager</h2>
+{{!-- finish putting in fields --}}
+<form {{action 'submit' model on='submit' }}>
     <div class="form-horizontal">
-        <h1>Hospital Information</h1>
+        <h3>customize texts in advance</h3>
         <hr/>
         <div class="form-group">
-            <label class="control-label col-md-2" for="Name">Name</label>
+            <label class="control-label col-md-2" for="contactRecipient">Contact Name</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="Name" name="Name" type="text" value="" />
+                {{ input class="form-control text-box single-line" id="contactRecipient" name="contactRecipient" type="text" value=model.contactRecipient}}
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-2" for="Address">Address</label>
+            <label class="control-label col-md-2" for="body">New Message</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="Address" name="Address" type="text" value="" />
+                {{input class="form-control text-box single-line" id="body" name="body" type="text" value=model.body}}
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-2" for="City">City</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="City" name="City" type="text" value="" />
+                {{input class="form-control text-box single-line" id="City" name="City" type="text" value=model.city}}
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-md-2" for="State">State</label>
             <div class="col-md-10">
-                <input class="form-control text-box single-line" id="State" name="State" type="text" value="" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-2" for="Zipcode">Zipcode</label>
-            <div class="col-md-10">
-                <input class="form-control text-box single-line" id="Zipcode" name="Zipcode" type="number" value="" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-2" for="Phone">Phone</label>
-            <div class="col-md-10">
-                <input class="form-control text-box single-line" id="Phone" name="Phone" type="text" value="" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+               {{ input class="form-control text-box single-line" id="State" name="State" type="text" value=model.state}}
             </div>
         </div>
     </div>
 </form>
 <div>
-    <a href="/hospitalsmvc">Back to List</a>
+    {{#link-to 'digidoo.hospitals'}}Hospital Info{{/link-to}}
 </div>
 <hr />
 <footer>
     <p>&copy; Byrth 2015 - by:Scott Ferguson & Alia Borroho - </p>
-</footer> --}}
+</footer>

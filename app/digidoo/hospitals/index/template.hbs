@@ -1,5 +1,10 @@
-<ul>
+<p class="hospital-list"></p>
     {{#each model as |hospital|}}
-        <li>{{hospital.name}}</li>
-    {{/each}}
-</ul>
+        <h2 class="h-name">{{hospital.name}}</h2>
+        <h4>{{hospital.address}}</h4>
+        <h4>{{hospital.city}} , {{hospital.state}}{{hospital.zipcode}}</h4>
+{{/each}}
+
+
+
+

@@ -1,22 +1,22 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            {{#link-to 'digidoo.index' class='navbar-brand'}}
+            {{#link-to 'digidoo.index' class="navbar-brand"}}
                 | Byrth |
             {{/link-to}}
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class= "nav-items">
-                    {{#link-to 'digidoo.sms'}}Message Manager{{/link-to}}
+                    {{#link-to 'digidoo.sms.create'}}Message Manager{{/link-to}}
                 </li>
                 <li class= "nav-items">
-                    <a href="/ContractionsMvc">Contraction Timer</a>
+                   {{#link-to 'digidoo.contractions'}}Contraction Timer{{/link-to}}
                 </li>
                 <li class= "nav-items">
                     {{#link-to 'digidoo.hospitals.create'}}Hospital Info{{/link-to}}

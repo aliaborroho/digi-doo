@@ -3,7 +3,7 @@ import DS from 'ember-data';
 
 
 export default DS.RESTAdapter.extend({
-  host: 'http://labortracker2.azurewebsites.net',
+  host: 'http://labortracker.azurewebsites.net',
   namespace: 'api',
   // actions: {
   //   createRecord: function() {
