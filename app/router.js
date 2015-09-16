@@ -6,6 +6,22 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('digidoo', {path: '/'}, function() {
+    this.route('hospitals', function() {
+      this.route('create');
+    });
+    this.route('contacts', function() {
+      this.route('create');
+    });
+    this.route('sms', function() {
+      this.route('create');
+    });
+  this.route('contractions', function() {
+      this.route('create');
+    });
+  });
 });
 
 export default Router;
+
+

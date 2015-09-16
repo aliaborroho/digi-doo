@@ -1,0 +1,9 @@
+<ul>
+    {{#each model as |contact|}}
+        <li>{{contact.fullName}}</li>
+    {{/each}}
+</ul>
+
+{{#link-to 'digidoo.contacts.create' class='btn btn-default'}}New{{/link-to}}
+
+{{outlet}}
