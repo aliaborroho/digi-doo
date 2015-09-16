@@ -2,10 +2,10 @@
 {{!-- finish putting in fields --}}
 <form {{action 'submit' model on='submit' }}>
 <div class="form-horizontal">
-        <h1>Contacts Manager</h1>
-        <hr/>
-        <div class="form-group">
-            <label class="control-label col-md-2" for="Name">First Name</label>
+<h1>Contacts Manager</h1>
+<hr/>
+    <div class="form-group">
+    <label class="control-label col-md-2" for="Name">First Name</label>
             <div class="col-md-10">
                 {{ input class="form-control text-box single-line" id="firstName" name="firstName" type="text" value=model.firstName}}
             </div>
@@ -28,6 +28,7 @@
             </div>
         </div>
     </div>
+
 </form>
 <div>
     {{#link-to 'digidoo.contacts'}}Back{{/link-to}}

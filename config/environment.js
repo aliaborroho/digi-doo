@@ -7,10 +7,10 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     googleFonts: [
-      'Cinzel+Decorative:300',
-      'Linotype Didot:300',
-      'Roboto:300'
-    ],
+      // 'Cinzel+Decorative:300',
+      'Pacifico:400',
+      'Josefin Slab:100',
+     ],
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -22,7 +22,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src':"'self' fonts.gstatic.com",
-      'connect-src': "'self' http://labortracker.azurewebsites.net http://labortracker.azurewebsites.net",
+      'connect-src': "'self' http://labortracker.azurewebsites.net",
       'img-src': "'self'",
       'style-src':  "'self' fonts.googleapis.com",
       'media-src': "'self'",
