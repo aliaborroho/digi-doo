@@ -16,9 +16,7 @@ Router.map(function() {
     this.route('sms', function() {
       this.route('create');
     });
-  this.route('contractions', function() {
-      this.route('create');
-    });
+  this.route('contractions');
   });
 });
 
