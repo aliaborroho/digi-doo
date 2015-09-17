@@ -4,9 +4,9 @@ export default Ember.Route.extend({
  model: function() {
    return Ember.$.ajax('http://labortracker.azurewebsites.net/api/hospitals');
    // Is this going to adapter.js?  Where in adapter.js?
-   return this.store.createRecord('hospital');
+   return store.createRecord('hospital');
  },
-
+// find record instead of create
 
  actions: {
    submit: function(hospital) {
