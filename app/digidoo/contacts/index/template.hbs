@@ -3,12 +3,14 @@
 </div>
 <table style="width:100%">
   <tr>
-    <th> Your Inner Circle </th>
+
+    <th>Contacts</th>
+
     <th colspan="2"></th>
   </tr>
 
     <tr>{{#each model as |contact|}}
-        <li>{{contact.fullName}} : {{contact.phone}}</li>
+        <li>{{contact.fullName}}   {{contact.phone}}</li>
     {{/each}}
 </tr>
 </table>
