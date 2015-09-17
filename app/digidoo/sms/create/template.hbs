@@ -1,40 +1,40 @@
-<h1 align=center font-family=Bodini font-weight=250>customize texts in advance</h1>
-<h2>Message Manager</h2>
-{{!-- finish putting in fields --}}
-<div class="form-group">
-            <label class="control-label col-md-2" for="contactRecipient">Contact Name</label>
-            <div class="col-md-10">
-                {{ input class="form-control text-box single-line" id="contactRecipient" name="contactRecipient" type="text" value=model.contactRecipient}}
-            </div>
-</div>
-<div class="form-group">
-            <label class="control-label col-md-2" for="body">New Message</label>
-            <div class="col-md-10">
-                {{input class="form-control text-box single-line" id="body" name="body" type="text" value=model.body}}
-            </div>
-        </div>
+<h1 >Customize texts in advance</h1>
 
-      {{!--   <div class="form-group">
-            <label class="control-label col-md-2" for="City">City</label>
-            <div class="col-md-10">
-                {{input class="form-control text-box single-line" id="City" name="City" type="text" value=model.city}}
-            </div>
+{{!-- <h2>Message Manager</h2> --}}
+{{!-- finish putting in fields --}}
+<form {{action 'submit' model on='submit'}}>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="contactRecipient">Contact Name</label>
+        <div class="col-md-10">
+            {{ input class="form-control text-box single-line" id="contactRecipient" name="contactRecipient" type="text" value=model.contactRecipient}}
         </div>
-        <div class="form-group">
-            <label class="control-label col-md-2" for="State">State</label>
-            <div class="col-md-10">
-               {{ input class="form-control text-box single-line" id="State" name="State" type="text" value=model.state}}
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-2" for="body">New Message</label>
+        <div class="col-md-10">
+            {{input class="form-control text-box single-line" id="body" name="body" type="text" value=model.body}}
+        </div>
+    </div>
+
+          {{!--   <div class="form-group">
+                <label class="control-label col-md-2" for="City">City</label>
+                <div class="col-md-10">
+                    {{input class="form-control text-box single-line" id="City" name="City" type="text" value=model.city}}
+                </div>
             </div>
             <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-            </div> --}}
-            <div>
-                <input type="submit" value="Save Message" class="btn btn-default" />
-            </div>
-
-<div>
-    {{#link-to 'digidoo.sms'}}Back{{/link-to}}
-</div>
+                <label class="control-label col-md-2" for="State">State</label>
+                <div class="col-md-10">
+                   {{ input class="form-control text-box single-line" id="State" name="State" type="text" value=model.state}}
+                </div>
+                <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                </div> --}}
+    <div>
+        {{#link-to 'digidoo.sms' class='btn btn-info'}}Back{{/link-to}}
+        <input type="submit" value="Save Message" class="btn btn-default" />
+    </div>
+</form>
 <hr />
 <footer>
     <p>&copy; Byrth 2015 - by:Scott Ferguson & Alia Borroho - </p>
