@@ -1,22 +1,20 @@
+<h1 align=center font-family=Bodini font-weight=250>customize texts in advance</h1>
 <h2>Message Manager</h2>
 {{!-- finish putting in fields --}}
-<form {{action 'submit' model on='submit' }}>
-    <div class="form-horizontal">
-        <h3>customize texts in advance</h3>
-        <hr/>
-        <div class="form-group">
+<div class="form-group">
             <label class="control-label col-md-2" for="contactRecipient">Contact Name</label>
             <div class="col-md-10">
                 {{ input class="form-control text-box single-line" id="contactRecipient" name="contactRecipient" type="text" value=model.contactRecipient}}
             </div>
-        </div>
-        <div class="form-group">
+</div>
+<div class="form-group">
             <label class="control-label col-md-2" for="body">New Message</label>
             <div class="col-md-10">
                 {{input class="form-control text-box single-line" id="body" name="body" type="text" value=model.body}}
             </div>
         </div>
-        <div class="form-group">
+
+      {{!--   <div class="form-group">
             <label class="control-label col-md-2" for="City">City</label>
             <div class="col-md-10">
                 {{input class="form-control text-box single-line" id="City" name="City" type="text" value=model.city}}
@@ -29,14 +27,13 @@
             </div>
             <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            </div> --}}
+            <div>
+                <input type="submit" value="Save Message" class="btn btn-default" />
             </div>
-            </div>
-        </div>
-    </div>
-</form>
+
 <div>
-    {{#link-to 'digidoo.sms'}}Hospital Info{{/link-to}}
+    {{#link-to 'digidoo.sms'}}Back{{/link-to}}
 </div>
 <hr />
 <footer>

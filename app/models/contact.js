@@ -5,5 +5,4 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   fullName: DS.attr('string'),
   phone: DS.attr('string'),
-
 });
