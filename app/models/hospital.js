@@ -6,7 +6,7 @@ export default DS.Model.extend({
   address: DS.attr('string'),
   city: DS.attr('string'),
   state: DS.attr('string'),
-  zip: DS.attr('number'),
+  zipcode: DS.attr('string'),
 });
 
 
