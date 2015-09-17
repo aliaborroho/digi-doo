@@ -1,38 +1,19 @@
-<div class="navbar navbar-inverse navbar-top-fixed nav-wrapper">
-    <div class="container header-wrapper">
-        <div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        {{#link-to 'digidoo.index' class="navbar-brand"}}
-                | Byrth |
-            {{/link-to}}
-        </div>
-
-       <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class= "nav-items">
-                    {{#link-to 'digidoo.sms.create'}}Message Manager{{/link-to}}
-                </li>
-                <li class= "nav-items">
-                   {{#link-to 'digidoo.contractions'}}Contraction Timer{{/link-to}}
-                </li>
-             <li class= "nav-items">
-                    {{#link-to 'digidoo.hospitals.create'}}Hospital Info{{/link-to}}
-                </li>
-                <li class= "nav-items">
-                    {{#link-to 'digidoo.contacts'}}Contacts Manager{{/link-to}}
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+{{#bs-navbar class='navbar-inverse navbar-top-fixed' name='| Byrth |' homeRoute='digidoo'}}
+    {{#link-to 'digidoo.sms' tagName='li' class='nav-items'}}
+        {{#link-to 'digidoo.sms.create'}}Message Manager{{/link-to}}
+    {{/link-to}}
+    {{#link-to 'digidoo.contractions' tagName='li' class='nav-items'}}
+       {{#link-to 'digidoo.contractions'}}Contraction Timer{{/link-to}}
+    {{/link-to}}
+    {{#link-to 'digidoo.hospitals' tagName='li' class='nav-items'}}
+        {{#link-to 'digidoo.hospitals.create'}}Hospital Info{{/link-to}}
+    {{/link-to}}
+    {{#link-to 'digidoo.contacts' tagName='li' class='nav-items'}}
+        {{#link-to 'digidoo.contacts'}}Contacts Manager{{/link-to}}
+    {{/link-to}}
+{{/bs-navbar}}
 
 
 <div class="container body-content">
-
-
     {{outlet}}
 </div>
