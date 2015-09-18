@@ -37,8 +37,8 @@ body {
     color: white;
     background-color: rgba(0, 0, 0, 0.75);
     font-family: 'Pacifico', cursive;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    // padding-top: 50px;
+    // padding-bottom: 50px;
     font-weight:100;
     min-height: 100vh;
 }
@@ -100,8 +100,9 @@ html {
 //   border-color: black;
 // }
 h1.logo-name {
-    text-align:right;
+    align:right;
     color:#002377;
+    font-family: Pacifico,cursive;
 }
 // #ember402 {
 //   height: 100vh;
@@ -152,11 +153,12 @@ h1 {
 
 .countdown h1 {
  line-height: 1;
- color: inherit;
+ color: white;
 }
 
 .countdown p {
  line-height: 1.4;
+
 }
 
 .container .countdown {

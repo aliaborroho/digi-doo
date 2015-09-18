@@ -10,7 +10,7 @@ export default Ember.Route.extend({
  actions: {
    submit: function(hospital) {
      hospital.save().then(() => {
-       this.transitionTo('hospitals');
+       this.transitionTo('digidoo.hospitals');
      });
    }
  }
