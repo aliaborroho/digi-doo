@@ -2,17 +2,22 @@
 
 {{!-- <h2>Message Manager</h2> --}}
 {{!-- finish putting in fields --}}
-<form {{action 'submit' model on='submit'}}>
+<form {{action 'submit' model.message on='submit'}}>
     <div class="form-group">
         <label class="control-label col-md-2" for="contactRecipient">Contact Name</label>
         <div class="col-md-10">
-            {{ input class="form-control text-box single-line" id="contactRecipient" name="contactRecipient" type="text" value=model.message.contactRecipient}}
+            {{#x-select class="form-control text-box single-line" value=model.message.recipient }}
+              {{#x-option}}Select a contact...{{/x-option}}
+              {{#each model.contacts as |contact|}}
+                {{#x-option value=contact}}{{contact.fullName}}{{/x-option}}
+              {{/each}}
+            {{/x-select}}
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-md-2" for="body">New Message</label>
         <div class="col-md-10">
-            {{input class="form-control text-box single-line" id="body" name="body" type="text" value=model.message.body}}
+            {{textarea class="form-control text-box single-line" id="body" name="body" type="text" value=model.message.body}}
         </div>
     </div>
 
@@ -31,7 +36,7 @@
                 <div class="col-md-offset-2 col-md-10">
                 </div> --}}
     <div>
-        {{#link-to 'digidoo.message' class='btn btn-info'}}Back{{/link-to}}
+        {{#link-to 'digidoo.sms' class='btn btn-info'}}Back{{/link-to}}
         <input type="submit" value="Save Message" class="btn btn-default" />
     </div>
 </form>

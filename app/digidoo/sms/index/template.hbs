@@ -5,7 +5,9 @@
 
 <ul>
     {{#each model as |message|}}
-        <li>{{message.recipient.fullName}} - "{{message.body}}"</li>
+        {{#unless message.isNew}}
+            <li>{{message.recipient.fullName}} - "{{message.body}}"</li>
+        {{/unless}}
     {{/each}}
 </ul>
 
