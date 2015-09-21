@@ -1,6 +1,9 @@
 <div>
 <h1>Your Inner Circle</h1>
 </div>
+
+{{#link-to 'digidoo.contacts.create' class='btn btn-default'}}Add new contact to your inner circle{{/link-to}}
+
 <ul style="width:100%">
 
     {{#each model as |contact|}}
@@ -9,7 +12,5 @@
         {{/unless}}
     {{/each}}
 </ul>
-
-{{#link-to 'digidoo.contacts.create' class='btn btn-default'}}Add new contact to your inner circle{{/link-to}}
 
 {{outlet}}

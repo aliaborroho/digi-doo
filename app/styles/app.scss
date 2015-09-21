@@ -19,12 +19,68 @@ $color2: #ffaaaa; //rgba(255, 170, 170, 100)
 $color3: #7fffc5; //rgba(127, 255, 197, 100)
 $color4: #93a5ff; //rgba(147, 165, 255, 100)
 $color5: #42f8ff; //rgba(66, 248, 255, 100)
-// {font-family: 'Pacifico', cursive;
+ // {font-family: 'Pacifico', cursive;
 //
 // black: #000000
 // purple:#42007C
 // blue:#002377
+// body {
+//   margin: 0;
+//   font-family: 'Oswald', sans-serif;
+//   background: url('') no-repeat center center;
+//   background-size: 100vw 100vh;
+// }
 
+// .overlay {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100vh;
+//   background: rgba(20,50,70,.9);
+//   mix-blend-mode: multiply;
+//   overflow: hidden;
+// }
+
+// a {
+//   position: relative;
+//   display: block;
+//   color: rgba(0,0,0,0);
+//   line-height: 0;
+//   font-weight: bold;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   text-align: center;
+//   font-size: 35vh;
+//   background: url('http://files.hawcubite.de/stock-images/landscapes/7777-a-rocky-coast-landscape-pv.jpg') no-repeat center center;
+//   background-size: 100vw 100vh;
+//   -webkit-background-clip: text;
+//   -webkit-text-stroke: 1px rgba(255,255,255,1);
+//   animation: out 1s;
+//   transition: font-size 2s, opacity 2s, -webkit-text-stroke 2s;
+// }
+
+// a:hover {
+//   line-height: 100%;
+//   animation: in 1s;
+// }
+
+// a:focus {
+//   line-height: 100%;
+//   font-size: 150vh;
+//   opacity: 0;
+//   -webkit-text-stroke: 1px rgba(255,255,255,0);
+//   animation: in 1s;
+// }
+
+// @keyframes in {
+//     0% {line-height: 0%;}
+//     100% {line-height: 100%;}
+// }
+
+// @keyframes out {
+//     0% {line-height: 100%;}
+//     100% {line-height: 0%;}
+// }
 html {
     background: url(/images/baby-blue.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -33,18 +89,32 @@ html {
     background-size: cover;
 }
 
+.navbar-brand {
+  font-family: Pacifico;
+}
+
 body {
     color: white;
     background-color: rgba(0, 0, 0, 0.75);
-    font-family: 'Pacifico', cursive;
+    font-family: 'Bodini';
     // padding-top: 50px;
     // padding-bottom: 50px;
-    font-weight:100;
+    font-weight:200;
     min-height: 100vh;
+    text-align: center;
 }
 .hover {
     font-size:30px;
     color:white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body .navbar-nav {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2em;
 }
 
 .navbar-inverse {
