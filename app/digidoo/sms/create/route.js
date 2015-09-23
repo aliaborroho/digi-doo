@@ -2,15 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-     this.store.createRecord('sms');
-   },
+    return Ember.RSVP.hash({
+      message: this.store.createRecord('message'),
+      contacts: this.store.findAll('contact')
+    });
+  },
 
-   actions: {
-     submit: function(form) {
-     form.save().then(() => {
-     this.transitionTo('/');
-       });
-     }
-   }
+  actions: {
+    submit: function(message) {
+      message.save().then(() => {
+        this.transitionTo('digidoo.sms.index');
+      });
+    }
+  }
 });
 

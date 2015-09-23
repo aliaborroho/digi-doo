@@ -1,18 +1,16 @@
 <div>
 <h1>Your Inner Circle</h1>
 </div>
-<table style="width:100%">
-  <tr>
-    <th> Your Inner Circle </th>
-    <th colspan="2"></th>
-  </tr>
-
-    <tr>{{#each model as |contact|}}
-        <li>{{contact.fullName}} : {{contact.phone}}</li>
-    {{/each}}
-</tr>
-</table>
 
 {{#link-to 'digidoo.contacts.create' class='btn btn-default'}}Add new contact to your inner circle{{/link-to}}
+
+<ul style="width:100%">
+
+    {{#each model as |contact|}}
+        {{#unless contact.isNew}}
+            <li>{{contact.fullName}} - {{contact.phone}}</li>
+        {{/unless}}
+    {{/each}}
+</ul>
 
 {{outlet}}

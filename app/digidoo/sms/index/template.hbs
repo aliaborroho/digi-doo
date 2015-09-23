@@ -1,1 +1,16 @@
+<div>
+<h1>Your Scheduled Messages</h1>
+</div>
+{{#link-to 'digidoo.sms.create' class='btn btn-default'}}Create a new message{{/link-to}}
+
+<ul>
+    {{#each model as |message|}}
+        {{#unless message.isNew}}
+            <li>{{message.recipient.fullName}} - "{{message.body}}" <button class="btn btn-info" {{action 'sendMessage' message}}>Send Message</button></li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+
+
 {{outlet}}

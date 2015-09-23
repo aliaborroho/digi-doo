@@ -11,7 +11,7 @@ model: function() {
  actions: {
    submit: function(contact) {
      contact.save().then(() => {
-       this.transitionTo('/');
+       this.transitionTo('digidoo.contacts');
      });
    }
  }
