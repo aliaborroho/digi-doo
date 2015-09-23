@@ -1,13 +1,27 @@
-
-{{!-- finish putting in fields --}}
-<form {{action 'submit' model on='submit' }}>
-<div class="form-horizontal">
+<div class="header">
 <h1>Contacts Manager</h1>
+</div>
+<p class="desc"> Add a new contact to your inner-circle</p>
+<div>
+
+{{!-- <div class="large-card">
+    <form {{action 'submit' model on='submit'}}>
+        <label for="firstName"> First Name</label>
+        {{input id='name' value=model.firstName}}
+         <label for="lastName"> Last Name</label>
+        {{input id='lastName' value=model.firstName}}
+         <label for="phone">Phone Number</label>
+        {{input id='phone' value=model.phone}}
+        <button>Save</button>
+    </form>
+</div> --}}
+</div>
 <hr/>
+    <form {{action 'submit' model on='submit' }}>
     <div class="form-group">
     <label class="control-label col-md-2" for="Name">First Name</label>
             <div class="col-md-10">
-                {{ input class="form-control text-box single-line" id="firstName" name="firstName" type="text" value=model.firstName}}
+                {{input class="form-control text-box single-line" id="firstName" name="firstName" type="text" value=model.firstName}}
             </div>
         </div>
         <div class="form-group">
@@ -23,15 +37,17 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <div class="col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
-    </div>
-</form>
-<div>
-    {{#link-to 'digidoo.contacts'}}Back{{/link-to}}
-</div>
+    </form>
+
+
+    {{#link-to 'digidoo'}}Back{{/link-to}}
+
+{{#link-to 'digidoo.contacts.index' class='btn btn-default'}}Add new contact to your inner circle{{/link-to}}
+
 <hr />
 <footer>
     <p>&copy; Byrth 2015 - by:Scott Ferguson & Alia Borroho - </p>
