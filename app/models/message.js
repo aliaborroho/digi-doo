@@ -10,7 +10,7 @@ export default DS.Model.extend({
   send: function() {
     return Ember.$.ajax({
       method: 'POST',
-      url: 'http://labortracker3.azurewebsites.net/api/messages/' + this.id + '/send'
+      url: 'http://labortracker.azurewebsites.net/api/messages' + this.id + '/send'
     });
   }
 });

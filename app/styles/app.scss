@@ -24,85 +24,136 @@ $color5: #42f8ff; //rgba(66, 248, 255, 100)
 // black: #000000
 // purple:#42007C
 // blue:#002377
-// body {
-//   margin: 0;
-//   font-family: 'Oswald', sans-serif;
-//   background: url('') no-repeat center center;
-//   background-size: 100vw 100vh;
+
+// html {
+//     background: url(/images/baby-blue.png) no-repeat center center fixed;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     -o-background-size: cover;
+//     background-size: cover;
 // }
 
-// .overlay {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   height: 100vh;
-//   background: rgba(20,50,70,.9);
-//   mix-blend-mode: multiply;
-//   overflow: hidden;
-// }
-
-// a {
-//   position: relative;
-//   display: block;
-//   color: rgba(0,0,0,0);
-//   line-height: 0;
-//   font-weight: bold;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   text-align: center;
-//   font-size: 35vh;
-//   background: url('http://files.hawcubite.de/stock-images/landscapes/7777-a-rocky-coast-landscape-pv.jpg') no-repeat center center;
-//   background-size: 100vw 100vh;
-//   -webkit-background-clip: text;
-//   -webkit-text-stroke: 1px rgba(255,255,255,1);
-//   animation: out 1s;
-//   transition: font-size 2s, opacity 2s, -webkit-text-stroke 2s;
-// }
-
-// a:hover {
-//   line-height: 100%;
-//   animation: in 1s;
-// }
-
-// a:focus {
-//   line-height: 100%;
-//   font-size: 150vh;
-//   opacity: 0;
-//   -webkit-text-stroke: 1px rgba(255,255,255,0);
-//   animation: in 1s;
-// }
-
-// @keyframes in {
-//     0% {line-height: 0%;}
-//     100% {line-height: 100%;}
-// }
-
-// @keyframes out {
-//     0% {line-height: 100%;}
-//     100% {line-height: 0%;}
-// }
-html {
-    background: url(/images/baby-blue.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
 .navbar-brand {
   font-family: Pacifico;
+  color:#93a5ff;
 }
 
+// body {
+//     color: white;
+//     background-color: rgba(0, 0, 0, 0.75);
+//     font-family: 'Bodini';
+//     // padding-top: 50px;
+//     // padding-bottom: 50px;
+//     font-weight:200;
+//     min-height: 100vh;
+//     text-align: center;
+// }
 body {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.75);
-    font-family: 'Bodini';
-    // padding-top: 50px;
-    // padding-bottom: 50px;
-    font-weight:200;
-    min-height: 100vh;
-    text-align: center;
+  margin: 0;
+  color: darkgray;
+  font-family: 'Bodini, sans-serif';
+  font-size: 18px;
+  line-height: 1.5;
+  // min-height:100vh;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+  background-color:#9BAFB5;
 }
+
+.u-headline-main,
+.u-copytext {
+  max-width: 30vw;
+  text-transform: uppercase;
+}
+
+.u-headline-main {
+  margin-bottom: 300px;
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+.u-copytext {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color:antiquewhite;
+  font-size:20px;
+}
+
+.Parallax-layer {
+  position: fixed;
+  z-index: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align: center;
+  height: 80vh;
+  width: 80vw;
+  text-align: center;
+}
+
+.Parallax-layer--intro .u-headline-main {
+  color: antiquewhite;
+  font-weight:700;
+  font-family: Pacifico;
+}
+
+
+
+
+.Parallax-imgHolder {
+  position: relative;
+  top: 0;
+  right: 0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.Parallax-imgHolder--1 {
+  background-image: url(/images/preggers.jpg);
+}
+
+.Parallax-imgHolder--2 {
+  background-image: url(/images/wood.png);
+}
+
+.Parallax-imgHolder--3 {
+  background-image: url(/images/logo-logo.png);
+}
+
+.Parallax-imgHolder--4 {
+  background-image: url(/images/thomas.jpg);
+}
+
+.Parallax-imgHolder--1 {
+  /*top: if($i == 0, ($layerHeight * $i), (($layerHeight * $i) - $layerQuarterHeight));*/
+  top: 0vh;
+  z-index: 0;
+}
+
+.Parallax-imgHolder--2 {
+ /*      top: if($i == 0, ($layerHeight * $i), (($layerHeight * $i) - $layerQuarterHeight));*/
+  top: 60vh;
+  z-index: -1;
+}
+
 .hover {
     font-size:30px;
     color:white;
@@ -115,10 +166,11 @@ ul {
 body .navbar-nav {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2em;
+  color:#E8BF51;
 }
 
 .navbar-inverse {
-    background-color: #7fffc5;
+    background-color:antiquewhite;
 }
 
 .ember-application {
@@ -127,7 +179,7 @@ body .navbar-nav {
 
 .table, .th, .td {
     border: 1px white;
-    background-color:grey;
+    background-color:#3F3F3F;
     color:white;
     max-width: 280px;
 }
@@ -150,7 +202,7 @@ html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  // box-sizing: inherit;
 }
 //html {
   //background-image: url(/images/IMG_2274.jpg);
@@ -165,24 +217,30 @@ html {
 //   // -o-background-size: cover;
 //   // background-size: cover;
 // }
-// .navbar-fixed-top {
-//   border-top: 15px;
-//   border-color: black;
-// }
+ .navbar-fixed-top {
+   border-top: 15px;
+   border-color: #9BAFB5;
+ }
 h1.logo-name {
     align:right;
-    color:#002377;
+    color:antiquewhite;
     font-family: Pacifico,cursive;
 }
-// #ember402 {
-//   height: 100vh;
-// }
+#ember402 {
+  height: 100vh;
+}
 #ember422 {
-  font-size: 28px;
+  font-size: 20px;
+}
+// #ember424 {
+//   font-size: 22px;
+
+.navbar-inverse {
+  color: hsl( 180,20%, 69%);
 }
 
 h1 {
-  color: whites;
+  color: antiquewhite;
   background-color: #000000;
   text-align: center;
 
@@ -191,12 +249,15 @@ h1 {
 
 
 #div.navbar-header {
-  font-size: 40px;
+  font-size: 18px;
   font-family: Bodini;
-  font-weight:150;
+  font-weight:50;
   color: white;
-}
 
+}
+#ember467, #ember485, #ember456, #ember439 {
+  background-color:#9BAFB5;
+}
 
 
 .nav-item {
@@ -280,7 +341,7 @@ footer{
    padding-right: 20px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+ // Set width on the form input elements since they're 100% wide by default
 input,
 select,
 textarea {

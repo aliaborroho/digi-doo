@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function() {
     return Ember.RSVP.hash({
-      message: this.store.createRecord('message'),
+      message: this.store.createRecord('sms'),
       contacts: this.store.findAll('contact')
     });
   },
@@ -11,7 +11,7 @@ export default Ember.Route.extend({
   actions: {
     submit: function(message) {
       message.save().then(() => {
-        this.transitionTo('digidoo.sms.index');
+        this.transitionTo('digidoo.sms');
       });
     }
   }
